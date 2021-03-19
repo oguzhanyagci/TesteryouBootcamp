@@ -1,0 +1,14 @@
+Feature('add_to_cart');
+
+Scenario('Add To Cart', ({ I }) => {
+    I.amOnPage('http://automationpractice.com');
+    I.seeInTitle('My Store');
+    I.click('Summer Dresses');
+    I.wait(5)
+    I.seeInTitle('Summer Dresses - My Store');
+    I.click('Printed Chiffon Dress')
+    I.seeInTitle('Printed Chiffon Dress - My Store')
+    I.click('Add to cart')
+    I.click('Proceed to checkout')
+    I.seeInTitle('Order - My Store')
+
