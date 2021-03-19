@@ -1,0 +1,9 @@
+Feature('search_item');
+
+Scenario('Item searching', ({ I }) => {
+    I.amOnPage('http://automationpractice.com');
+    I.seeInTitle('My Store');
+    I.fillField('search_query','Blouse');
+    I.click('submit_search')
+    I.seeInTitle('Search - My Store');
+});
